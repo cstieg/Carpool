@@ -1,0 +1,45 @@
+RuralRide
+P2P carpooling
+
+Let drivers post routes and times, trip cost / mile cost / out-of-the-way surcharge for gas and time, max out-of-the-way distance.
+
+Option to meet at carpool locations like off the expressway exit - Share-A-Ride
+	Useful for rural commute into the city
+
+
+
+Models
+	User
+		Basic contact info
+	
+		Sub class driver
+		Sub class rider
+
+	Vehicle
+
+	Ride offer
+
+	Ride leg
+
+	Ride type
+		One time set trip
+		Long term set trip
+		Open trip
+
+	Ride request
+
+	Location
+
+
+	Review
+
+
+
+Pages
+	Register
+
+	Ride offer / request form
+
+	Search ride
+
+	Review
