@@ -7,13 +7,27 @@ Option to meet at carpool locations like off the expressway exit - Share-A-Ride
 	Useful for rural commute into the city
 
 
+Actions
+-------
+
+Register user
+  -- add to ApplicationUser and User
+
+Add vehicle
+
+Add address
+
+
+
+
+
+
 
 Models
 	User
 		Basic contact info
 	
-		Sub class driver
-		Sub class rider
+		driver / rider
 
 	Vehicle
 
