@@ -12,7 +12,6 @@ namespace Carpool.Domain.Services
     {
         private readonly IUnitOfWork _uow;
 
-        public MembershipService() { }
         public MembershipService(IUnitOfWork uow)
         {
             _uow = uow;
