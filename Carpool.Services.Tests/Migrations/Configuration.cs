@@ -1,15 +1,18 @@
+using Carpool.Services.Tests.Repositories;
+
 namespace Carpool.Services.Tests.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Carpool.Services.Tests.TestContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<CarpoolTestContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(Carpool.Services.Tests.TestContext context)
+        protected override void Seed(CarpoolTestContext context)
         {
         }
     }
