@@ -15,6 +15,7 @@ namespace Carpool.Domain.Repository
         IEntityRepository<Vehicle> Vehicles { get; }
         IEntityRepository<VehicleMake> VehicleMakes { get; }
         IEntityRepository<VehicleModel> VehicleModels { get; }
+        IEntityRepository<VehicleModelYear> VehicleModelYears { get; }
 
         Task SaveChangesAsync();
     }

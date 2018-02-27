@@ -10,7 +10,7 @@ namespace Carpool.Domain.Models
 
         [Required]
         [ForeignKey("Model")]
-        public int VehicleModelId { get; set; }
+        public int ModelId { get; set; }
         public VehicleModel Model { get; set; }
 
         [Required]

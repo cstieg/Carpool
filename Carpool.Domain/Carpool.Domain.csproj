@@ -59,6 +59,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Core\IEntity.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\VehicleModelYear.cs" />
     <Compile Include="Repository\EntitiesContext.cs" />
     <Compile Include="Models\LatLng.cs" />
     <Compile Include="Models\Location.cs" />

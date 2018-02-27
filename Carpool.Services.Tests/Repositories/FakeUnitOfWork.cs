@@ -18,6 +18,7 @@ namespace Carpool.Services.Tests.Repositories
         public IEntityRepository<Vehicle> Vehicles { get; }
         public IEntityRepository<VehicleMake> VehicleMakes { get; }
         public IEntityRepository<VehicleModel> VehicleModels { get; }
+        public IEntityRepository<VehicleModelYear> VehicleModelYears { get; }
 
         private List<IEntity> _added = new List<IEntity>();
         private List<IEntity> _changed = new List<IEntity>();

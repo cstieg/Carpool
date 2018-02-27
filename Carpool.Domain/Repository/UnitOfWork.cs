@@ -19,6 +19,7 @@ namespace Carpool.Domain.Repository
         public IEntityRepository<Vehicle> Vehicles { get; }
         public IEntityRepository<VehicleMake> VehicleMakes { get; }
         public IEntityRepository<VehicleModel> VehicleModels { get; }
+        public IEntityRepository<VehicleModelYear> VehicleModelYears { get; }
         
         public UnitOfWork(EntitiesContext context)
         {
@@ -33,6 +34,7 @@ namespace Carpool.Domain.Repository
             Vehicles = new EntityRepository<Vehicle>(context);
             VehicleMakes = new EntityRepository<VehicleMake>(context);
             VehicleModels = new EntityRepository<VehicleModel>(context);
+            VehicleModelYears = new EntityRepository<VehicleModelYear>(context);
         }
 
         public async Task SaveChangesAsync()

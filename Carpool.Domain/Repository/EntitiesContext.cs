@@ -20,5 +20,6 @@ namespace Carpool.Domain.Repository
         public IDbSet<Vehicle> Vehicles { get; set; }
         public IDbSet<VehicleMake> VehicleMakes { get; set; }
         public IDbSet<VehicleModel> VehicleModels { get; set; }
+        public IDbSet<VehicleModelYear> VehicleModelYears { get; set; }
     }
 }
