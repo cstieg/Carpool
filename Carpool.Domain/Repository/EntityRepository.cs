@@ -90,5 +90,11 @@ namespace Carpool.Domain.Repository
             DbEntityEntry dbEntityEntry = _entitiesContext.Entry<T>(entity);
             dbEntityEntry.State = EntityState.Deleted;
         }
+
+        public virtual async Task DeleteByIdAsync(int id)
+        {
+            T entity = await FindBy(e => e.Id == id).SingleAsync();
+            Delete(entity);
+        }
     }
 }

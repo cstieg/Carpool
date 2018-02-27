@@ -20,7 +20,8 @@ namespace Carpool.Domain.Repository
             Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties);
 
         void Add(T entity);
-        void Delete(T entity);
         void Edit(T entity);
+        void Delete(T entity);
+        Task DeleteByIdAsync(int id);
     }
 }
