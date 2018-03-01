@@ -7,6 +7,17 @@ Option to meet at carpool locations like off the expressway exit - Share-A-Ride
 	Useful for rural commute into the city
 
 
+PayPal option to settle payments between sharers, or calculate and pay in cash
+Settle once a month to minimize fees / hassle
+
+Keep track of rides, have settle up function
+Calendar to track days
+Smart phones could even automatically keep track by tracking movement of phone
+
+Ride -- field for RideOffer, RideRequests to keep track of base rides before combining
+field for Modified to exclude original ride offers that have been modified
+
+
 Actions
 -------
 
