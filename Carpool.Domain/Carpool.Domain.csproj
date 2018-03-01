@@ -59,6 +59,8 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Core\IEntity.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\WeekDay.cs" />
+    <Compile Include="Models\RideSearch.cs" />
     <Compile Include="Models\VehicleModelYear.cs" />
     <Compile Include="Repository\EntitiesContext.cs" />
     <Compile Include="Models\LatLng.cs" />
@@ -80,7 +82,7 @@
     <Compile Include="Repository\NotFoundException.cs" />
     <Compile Include="Repository\PaginatedList.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
-    <Compile Include="Repository\UserExpositoryExtensions.cs" />
+    <Compile Include="Repository\UserRepositoryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

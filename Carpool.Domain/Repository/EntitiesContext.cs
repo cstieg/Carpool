@@ -15,7 +15,7 @@ namespace Carpool.Domain.Repository
         public IDbSet<Ride> Rides { get; set; }
         public IDbSet<RideCost> RideCosts { get; set; }
         public IDbSet<RideLeg> RideLegs { get; set; }
-        public IDbSet<Rider> Rider { get; set; }
+        public IDbSet<Rider> Riders { get; set; }
         public IDbSet<User> Users { get; set; }
         public IDbSet<Vehicle> Vehicles { get; set; }
         public IDbSet<VehicleMake> VehicleMakes { get; set; }
