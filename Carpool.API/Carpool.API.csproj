@@ -244,6 +244,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802281814172_RideCostToRide.cs" />
+    <Compile Include="Migrations\201802281814172_RideCostToRide.Designer.cs">
+      <DependentUpon>201802281814172_RideCostToRide.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -335,6 +339,11 @@
       <Project>{e44d0188-2251-48de-8c34-648681dd5b93}</Project>
       <Name>Carpool.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802281814172_RideCostToRide.resx">
+      <DependentUpon>201802281814172_RideCostToRide.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

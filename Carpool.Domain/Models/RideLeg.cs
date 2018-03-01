@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Carpool.Domain.Models
@@ -22,8 +23,19 @@ namespace Carpool.Domain.Models
         public int DestinationId { get; set; }
         public virtual Location Destination { get; set; }
 
+        // distance in miles
         public float Distance { get; set; }
 
-        public float Time { get; set; }
+        public TimeSpan TravelTime { get; set; }
+
+        // have to use TimeSpan instead of DateTime without date to avoid errors in SQL server
+        public TimeSpan StartTime { get; set; }
+
+        public TimeSpan ArrivalTime {
+            get
+            {
+                return StartTime + TravelTime;
+            }
+        }
     }
 }
