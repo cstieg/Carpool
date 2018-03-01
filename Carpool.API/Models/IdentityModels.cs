@@ -19,7 +19,6 @@ namespace Carpool.API.Models
             return userIdentity;
         }
 
-        [InverseProperty("IdentityUser")]
         public virtual User User { get; set; }
     }
 
