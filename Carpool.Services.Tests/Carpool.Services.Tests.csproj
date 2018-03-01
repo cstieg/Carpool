@@ -69,6 +69,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CarpoolTestContext.cs" />
+    <Compile Include="RideServiceTest.cs" />
     <Compile Include="VehicleServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
