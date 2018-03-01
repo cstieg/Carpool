@@ -51,9 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Interfaces\IMembershipService.cs" />
-    <Compile Include="Services\Interfaces\IVehicleService.cs" />
     <Compile Include="Services\MembershipService.cs" />
+    <Compile Include="Services\RideService.cs" />
     <Compile Include="Services\VehicleService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +64,9 @@
       <Project>{4dee6fad-e9ec-4d06-9f45-22a686acbff3}</Project>
       <Name>Carpool.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exception\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

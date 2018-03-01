@@ -1,7 +1,5 @@
 ﻿using Carpool.Domain.Models;
 using Carpool.Domain.Repository;
-using Carpool.Services.Services.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -9,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Carpool.Services.Services
 {
-    public class VehicleService : IVehicleService
+    public class VehicleService
     {
         private readonly IUnitOfWork _uow;
 

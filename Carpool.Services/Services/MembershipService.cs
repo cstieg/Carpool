@@ -1,6 +1,5 @@
 ﻿using Carpool.Domain.Models;
 using Carpool.Domain.Repository;
-using Carpool.Domain.Services.Interfaces;
 using Cstieg.ObjectHelpers;
 using System;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Carpool.Domain.Services
 {
-    public class MembershipService : IMembershipService
+    public class MembershipService
     {
         private readonly IUnitOfWork _uow;
 
