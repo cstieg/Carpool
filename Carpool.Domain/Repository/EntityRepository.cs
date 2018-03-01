@@ -1,5 +1,6 @@
 ﻿using Carpool.Domain.Models;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -83,6 +84,23 @@ namespace Carpool.Domain.Repository
         {
             DbEntityEntry dbEntityEntry = _entitiesContext.Entry<T>(entity);
             dbEntityEntry.State = EntityState.Modified;
+        }
+
+        public virtual void Upsert(T entity)
+        {
+            DbEntityEntry dbEntityEntry = _entitiesContext.Entry<T>(entity);
+            dbEntityEntry.State = entity.Id == 0
+                                    ? EntityState.Added
+                                    : EntityState.Modified;
+        }
+
+        public virtual void DeleteAll(ICollection<T> entities)
+        {
+            // reverse loop to avoid causing error in shifting list on delete
+            for (var i = entities.Count - 1; i >= 0; i--)
+            {
+                Delete(entities.ElementAt(i));
+            }
         }
 
         public virtual void Delete(T entity)

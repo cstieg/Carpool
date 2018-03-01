@@ -1,5 +1,6 @@
 ﻿using Carpool.Domain.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -21,7 +22,9 @@ namespace Carpool.Domain.Repository
 
         void Add(T entity);
         void Edit(T entity);
+        void Upsert(T entity);
         void Delete(T entity);
+        void DeleteAll(ICollection<T> entities);
         Task DeleteByIdAsync(int id);
     }
 }
