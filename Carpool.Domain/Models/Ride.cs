@@ -13,21 +13,26 @@ namespace Carpool.Domain.Models
 
         [ForeignKey("Creator")]
         public int CreatorUserId { get; set; }
+        [Required]
         public virtual User Creator { get; set; }
 
         [ForeignKey("Driver")]
-        public int DriverUserId { get; set; }
+        public int? DriverUserId { get; set; }
         public virtual User Driver { get; set; }
 
         [InverseProperty("Ride")]
         public ICollection<Rider> Riders { get; set; }
 
         [ForeignKey("Vehicle")]
-        public int VehicleId { get; set; }
+        public int? VehicleId { get; set; }
         public virtual Vehicle Vehicle { get; set; }
 
         [InverseProperty("Ride")]
         public ICollection<RideLeg> RideLegs { get; set; }
+
+        [ForeignKey("RideCost")]
+        public int? RideCostId { get; set; }
+        public virtual RideCost RideCost { get; set; }
 
         public float Distance {
             get
@@ -36,35 +41,26 @@ namespace Carpool.Domain.Models
             }
         }
 
-        public float Time
+        public TimeSpan TravelTime
         {
             get
             {
-                return RideLegs.Sum(r => r.Time);
+                return new TimeSpan(RideLegs.Sum(r => r.TravelTime.Ticks));
             }
         }
 
-        public DateTime StartDateTime { get; set; }
-
-        public DateTime ReturnDateTime { get; set; }
-
         /// <summary>
-        /// Bitwise representation of days of the week that are repeated
-        ///  1 - Monday
-        ///  2 - Tuesday
-        ///  4 - Wednesday
-        ///  8 - Thursday
-        /// 16 - Friday
-        /// 32 - Saturday
-        /// 64 - Sunday
+        /// Bitwise representation of days of the week that are repeated. Values enumerated in WeekDay enum
         /// </summary>
         public byte Repeating { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime? StartDate { get; set; }
 
-        public int AvailableSeats { get; set; }
+        public DateTime? EndDate { get; set; }
 
-        public int RemainingSeats
+        public int? AvailableSeats { get; set; }
+
+        public int? RemainingSeats
         {
             get
             {
